@@ -153,6 +153,10 @@ p.para-s {
 
 
 
+// I use this to line up the baselines
+// best used in descrete chunks not the whole page
+// as it's probably impossible to make all the 
+// bits fit together exactly
 
 .pangram-block {
   background: linear-gradient(
@@ -249,25 +253,28 @@ th.numeric, td.numeric {
 
 
 
+
+
 // fixed widths for the table columns, to start with
 $tablecol: 24px;
 
-th.col8 {width: $tablecol * 8}
-th.col7 {width: $tablecol * 7}
-th.col6 {width: $tablecol * 6}
-th.col5 {width: $tablecol * 5}
-th.col4 {width: $tablecol * 4}
-th.col3 {width: $tablecol * 3}
-th.col2 {width: $tablecol * 2}
-th.col1 {width: $tablecol * 1}
-th.colgap, td.colgap {margin-right: $tablecol * 1}
+@media (min-width: 769px) {
+  th.col8 {width: $tablecol * 8}
+  th.col7 {width: $tablecol * 7}
+  th.col6 {width: $tablecol * 6}
+  th.col5 {width: $tablecol * 5}
+  th.col4 {width: $tablecol * 4}
+  th.col3 {width: $tablecol * 3}
+  th.col2 {width: $tablecol * 2}
+  th.col1 {width: $tablecol * 1}
+  th.colgap, td.colgap {margin-right: $tablecol * 1}
+}
 
 .table-title  {
   display: inline-block;
   float: left;
   width: $tablecol * 7;
 }
-
 .table-tools {
   position: relative;
   top:15px;
@@ -325,6 +332,51 @@ div.menuburger label {
 }
 
 
+
+
+
+
+
+// some responsive utilites, hiding things on mob/bigger
+
+@media screen and (max-width: 768px) {
+.hide-mobile {
+  display: none;
+  }
+}
+@media (min-width: 769px) {
+.hide-desktop {
+  display: none;
+  }
+}
+
+// do some responsive work to hide certain portfolio columns at breakpoints
+//
+// these are the column names
+
+// share-table-name         --keep
+// share-table-invested     --keep
+// share-table-shares       --lose
+// share-table-moves        --lose
+// share-table-valuation    --lose
+// share-table-value        --keep
+// share-table-actions      --keep
+// share-table-buysell      --merge with actions
+
+@media screen and (max-width: 768px) {
+table {width:366px;}
+.update-blob {display: none;}
+.share-table {position:relative;left: -16px;}
+th.share-table-name {padding-left:16px;}
+th.share-table-invested, td.share-table-invested {padding-right:16px;}
+
+
+th.col1, td.col1, 
+th.share-table-shares, td.share-table-shares, 
+th.share-table-moves, td.share-table-moves, 
+th.share-table-valuation, td.share-table-valuation, 
+th.share-table-buysell, td.share-table-buysell {display: none;}
+}
 
 
 // quick table for all the coloured blocks of each of the example companies logos and colours
