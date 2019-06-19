@@ -1,0 +1,384 @@
+// The unbranded stylesheet is used if you need to create pages in your
+// prototype without the GOV.UK branding.
+//
+// See localhost:3000/docs/examples/blank-unbranded
+
+// Import colour palette and applied colours so that we can use
+// $govuk-body-background-colour in our overrides below.
+// 
+// If you need to enable compatibility mode or the legacy palette, do that
+// *before* these imports.
+@import "node_modules/govuk-frontend/settings/colours-palette";
+@import "node_modules/govuk-frontend/settings/colours-applied";
+
+// Style links and paragraphs by default
+$govuk-global-styles: true;
+
+// Override the govuk-frontend font stack
+//$govuk-font-family: "Sofia", "SofiaRegular", "Arial", "Helvetica", sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with
+// the GOV.UK footer.
+$govuk-canvas-background-colour: $govuk-body-background-colour;
+
+@import "node_modules/govuk-frontend/all";
+
+
+@font-face {
+  font-family: 'SofiaNumbers';
+  src: url('sofianumbers-webfont.eot'); /* IE9 Compat Modes */
+  src: url('sofianumbers-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('sofianumbers-webfont.woff') format('woff'),
+       url('sofianumbers-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('sofianumbers-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+
+@font-face {
+  font-family: 'SofiaBold';
+   src: url('sofia_pro_bold-webfont.eot'); /* IE9 Compat Modes */
+   src: url('sofia_pro_bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('sofia_pro_bold-webfont.woff') format('woff'),
+        url('sofia_pro_bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('sofia_pro_bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'SofiaSemiBold';
+
+   src: url('sofia_pro_semi_bold-webfont.eot'); /* IE9 Compat Modes */
+   src: url('sofia_pro_semi_bold-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('sofia_pro_semi_bold-webfont.woff') format('woff'),
+        url('sofia_pro_semi_bold-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('sofia_pro_semi_bold-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'SofiaRegular';
+   src: url('sofia_pro_regular-webfont.eot'); /* IE9 Compat Modes */
+   src: url('sofia_pro_regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('sofia_pro_regular-webfont.woff') format('woff'),
+        url('sofia_pro_regular-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('sofia_pro_regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'SofiaUltraLight';
+   src: url('sofia_pro_ultra_light-webfont.eot'); /* IE9 Compat Modes */
+   src: url('sofia_pro_ultra_light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('sofia_pro_ultra_light-webfont.woff') format('woff'),
+        url('sofia_pro_ultra_light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('sofia_pro_ultra_light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+.numbers {
+  font-family: 'SofiaNumbers', sans-serif;
+}
+
+.sofiaulight {
+  font-family: 'SofiaUltraLight', sans-serif;
+}
+
+.sofiabold {
+  font-family: 'SofiaBold', sans-serif;
+}
+
+p.sofiasemibold {
+  font-family: 'SofiaSemiBold', sans-serif;
+  margin-top: -0.18em;
+  margin-bottom: 1.22em;
+}
+
+p, a, .sofia {
+  font-family: 'SofiaRegular', sans-serif;
+}
+
+.highlighted {
+	background-color: rgba(255,255,166,0.75);
+}
+.pennies {
+	font-size: 50px;
+}
+
+
+.govuk-heading-xl {
+	font-size: 72px;
+	font-family: 'SofiaUltraLight', sans-serif;
+}
+
+.govuk-heading-l {
+  font-size: 48px;
+  font-family: 'SofiaUltraLight', sans-serif;
+}
+
+.govuk-heading-m {
+  font-size: 36px;
+  font-family: 'SofiaBold', sans-serif;
+  line-height: 32px;
+  position: relative;
+  top:0.2em; //add to the fontsize = a multiple of the 8/16 baseline grid
+}
+
+.govuk-heading-s {
+  font-size: 24px;
+  font-family: 'SofiaSemiBold', sans-serif;
+  line-height: 32px;
+  position: relative;
+  top:0.2em; //add to the fontsize = a multiple of the 8/16 baseline grid
+}
+
+p {
+  margin: 0 0 1em 0;
+  padding: 0 0 0 0;
+}
+
+p.para-l {
+  font-size: 24px;
+  line-height: 32px;
+  position: relative;
+  top:6px;
+}
+p.para-m {
+  font-size: 18px;
+  line-height: 1.34;
+  position: relative;
+  top:3px;
+}
+p.para-s {
+  font-size: 14px;
+  line-height: 1.75;
+  position: relative;
+  top:2px;
+}
+
+
+
+
+.pangram-block {
+  background: linear-gradient(
+  to bottom,
+  #fcc,
+  #fcc 50%,
+  #fff 50%,
+  #fff
+  );
+  /* The rectangle in which to repeat. 
+   It can be fully wide in this case */
+  background-size: 100% 32px;
+}
+
+
+
+
+//some colours to use as $ ... move out into a colours doc at some point
+
+$table-header: #005994;
+$action-green: #009419;
+$link-blue: #1D8FFF; //dodget blue / base
+
+
+
+
+.share-table {
+position: relative;
+top: 0.72em;
+//border-top:1px solid #666;
+}
+.share-table table {
+  border-spacing: 0;
+  padding:0;
+}
+
+.share-table th {
+  font-family: 'SofiaRegular', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $table-header;
+  text-align: left;
+  padding: 0.85em 0 0.55em 0;
+}
+
+.share-table td {
+  padding:0;
+  font-family: 'SofiaNumbers', sans-serif;
+  font-size: 18px;
+  color: #333;
+  text-align: left;
+  padding: 0.85em 0 0.55em 0;
+  max-height: 48px;
+  overflow: hidden;
+}
+.share-table td.name {
+  padding-left: 16px;
+  font-family: 'SofiaRegular', sans-serif;
+}
+.updates-heading-blob {
+  color: white;
+  background-color: $table-header;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.25;
+  font-size: 12px;
+  position: relative;
+  top:-5px;
+}
+.updates-heading-label {
+  font-size: 14px
+}
+.update-blob {
+  color: white;
+  background-color: #d33;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.25;
+  font-size: 12px;
+  position: relative;
+  top:-5px;
+  left:3px;
+}
+
+th.numeric, td.numeric {
+  text-align: right;
+}
+
+
+
+// fixed widths for the table columns, to start with
+$tablecol: 24px;
+
+th.col8 {width: $tablecol * 8}
+th.col7 {width: $tablecol * 7}
+th.col6 {width: $tablecol * 6}
+th.col5 {width: $tablecol * 5}
+th.col4 {width: $tablecol * 4}
+th.col3 {width: $tablecol * 3}
+th.col2 {width: $tablecol * 2}
+th.col1 {width: $tablecol * 1}
+th.colgap, td.colgap {margin-right: $tablecol * 1}
+
+.table-title  {
+  display: inline-block;
+  float: left;
+  width: $tablecol * 7;
+}
+
+.table-tools {
+  position: relative;
+  top:15px;
+}
+.table-tools span {
+  float: left;
+  font-family: 'SofiaSemiBold', sans-serif;
+  width: $tablecol * 2;
+  padding-left: 18px
+}
+.table-sort {
+  background-image: url('/public/images/sort-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 0 6px;
+}
+.table-filter {
+  background-image: url('/public/images/filter-icon.svg');
+  background-repeat: no-repeat;
+  background-size: 12px;
+  background-position: 0 6px;
+}
+
+
+.table-title-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.moves {
+  .active {border-bottom: 2px solid $table-header;color: $table-header;}
+
+  a { text-decoration: none;color: $link-blue;font-weight: 600 ; }
+  a:hover {text-decoration: underline;color: $table-header;}
+}
+
+
+
+
+
+div.menuburger {
+  width: 30px;
+  position: relative;
+  top: 0.31rem;
+  border: none;
+  background: none;
+  background-image: url('/public/images/three-lines-arrow.svg');
+  background-repeat: no-repeat;
+  background-size: 1.15rem;
+  background-position: 0.555rem 0.0rem;
+}
+div.menuburger label {
+  visibility: hidden ;
+}
+
+
+
+
+// quick table for all the coloured blocks of each of the example companies logos and colours
+// could probably do this with a single svg on the sibling class and just change the colour 
+// but I couldn;t get that to work in a sensible amount of time
+
+.company-igloo {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='hotpink' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E");
+}
+.company-abund {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='pink' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-macre {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='red' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-den {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='aqua' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-revol {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%2300a0e1' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-aduna {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='orange' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-evento {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='blue' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-fecana {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='turquoise' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-binfit {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23333333' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-storter {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23ff6600' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-huufe {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%233366ff' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-helpeep {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23ffcc00' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-jaja {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='black' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-desklod {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%2366ccff' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-tickr {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23ff9999' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-ripple {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23ff9999' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
+.company-cuckooz {
+  background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='%23444444' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E"); 
+}
