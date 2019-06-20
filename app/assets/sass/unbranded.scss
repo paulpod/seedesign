@@ -105,6 +105,17 @@ p, a, .sofia {
 	font-size: 72px;
 	font-family: 'SofiaUltraLight', sans-serif;
 }
+@media screen and (max-width: 768px) {
+  .govuk-heading-xl {
+  font-size: 56px;
+  }
+}
+@media screen and (min-width: 769px) {
+.long-fix {
+  width: 900px;
+  overflow: visible;
+  }
+}
 
 .govuk-heading-l {
   font-size: 48px;
