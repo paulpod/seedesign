@@ -1,0 +1,144 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Seedrs Design - using Sofia Pro with numbers
+{% endblock %}
+
+{% block content %}
+
+<div class="header-cells-container "><!-- container with max-widths and side margins -->
+
+  <h1 class="govuk-heading-m" style="position: relative;left:-3px"><!-- fiddling with type to sharpen left margin-->
+    Your investments
+  </h1>
+
+  <div class="header-cell"><!-- we'll have six of these on a desktop, based on a 12 column grid with 24px gutters -->
+    <p>Amount invested
+    <span class="header-number">£24,754<span class="hide-mobile">.</span><span class="pennies">63</span></span>
+      <span class="sofialight">in 15 businesses</p>
+  </div><!-- end cell -->
+
+  <div class="header-cell">
+    <p>Current value
+    <span class="header-number">£72,793<span class="hide-mobile">.</span><span class="pennies">70</span></span>
+      &nbsp;</p>
+  </div><!-- end cell -->
+
+  <div class="header-cell">
+    <p>IRR<a href="#" class="explain-blob">?</a>
+      <span class="header-number">13.2%</span>
+      <a href="#">show calculation</a></p>
+  </div><!-- end cell -->
+
+  <div class="header-cell last-cell">
+    <p>IRR, tax adjusted<a href="#" class="explain-blob">?</a>
+      <span class="header-number">37.1%</span>
+      <a href="#">show calculation</a></p>
+  </div><!-- end cell -->
+
+</div><!-- end container -->
+
+
+<!-- Create a div where the graph will take place -->
+<div id="user-data-chart"></div>
+
+<script src="/public/javascripts/user-data-chart.js" defer></script>
+
+
+
+
+
+
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <div class="">
+
+        <div class="table-title-block" id="portfolio-title-block">
+
+          <h2 class="govuk-heading-m table-title" style="position: relative;left:-2px">
+            Portfolio
+          </h2>
+
+          <div class="table-tools">
+            <span class="table-sort">Sort</span>
+
+            <span class="table-filter">Filter</span>
+          </div>
+
+        </div>
+        <!-- end table header block -->
+
+        <div class="share-table ">
+          <table>
+            <thead>
+              <th class="share-table-name">Investments&nbsp;<span class="hide-mobile updates-heading-blob">4</span><span class="hide-mobile updates-heading-label">updates</span></th>
+
+              <th class="numeric col4 share-table-invested">Invested</th>
+
+              <th class="numeric col3 colgap share-table-shares">Shares</th>
+
+              <th class="col1">&nbsp;</th>
+
+              <th colspan="2" class="col7 share-table-moves"><div class="moves">Moves&nbsp;<a href="#">1M</a>&nbsp;<a href="#">6M</a>&nbsp;<a href="#" class="active">1Y</a>&nbsp;<a href="#">all</a></div></th>
+
+              <th class="numeric col4 colgap share-table-valuation">Valuation</th>
+
+              <th class="col1">&nbsp;</th>
+
+              <th class="numeric col4 colgap share-table-value">Total value</th>
+
+              <th class="col1">&nbsp;</th>
+
+              <th class="col3 share-table-actions"><span class="hide-mobile">Actions</span></th>
+
+              <th class="col3 share-table-buysell">Buy/Sell</th>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td class="name company-igloo share-table-name">Igloo&nbsp;Energy<span class="update-blob">1</span></td>
+
+                <td class="numeric share-table-invested">£22<span class="pennies">.40</span></td>
+
+                <td class="numeric share-table-shares">1</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {38,56,23,35,21,19,27,23,23,35,32,19,12,22}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">+2.34%</td>
+
+                <td class="numeric share-table-valuation">£13m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£22<span class="pennies">.92</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+
+        </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

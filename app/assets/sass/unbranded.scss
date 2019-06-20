@@ -21,6 +21,21 @@ $govuk-global-styles: true;
 // the GOV.UK footer.
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
+
+
+
+
+
+//some colours to use as $ ... move out into a colours doc at some point
+
+$table-header: #005994;
+$action-green: #009419;
+$link-blue: #1D8FFF; //dodget blue / base
+
+
+
+
+
 @import "node_modules/govuk-frontend/all";
 
 
@@ -31,6 +46,15 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
        url('sofianumbers-webfont.woff') format('woff'),
        url('sofianumbers-webfont.woff2') format('woff2'), /* Super Modern Browsers */
        url('sofianumbers-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'SofiaNumbersLight';
+  src: url('sofia_numbers_light-webfont.eot'); /* IE9 Compat Modes */
+  src: url('sofia_numbers_light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('sofia_numbers_light-webfont.woff') format('woff'),
+       url('sofia_numbers_light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('sofia_numbers_light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
 }
 
 
@@ -63,6 +87,15 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 }
 
 @font-face {
+  font-family: 'SofiaLight';
+   src: url('sofia_pro_light-webfont.eot'); /* IE9 Compat Modes */
+   src: url('sofia_pro_light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+        url('sofia_pro_light-webfont.woff') format('woff'),
+        url('sofia_pro_light-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+        url('sofia_pro_light-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+@font-face {
   font-family: 'SofiaUltraLight';
    src: url('sofia_pro_ultra_light-webfont.eot'); /* IE9 Compat Modes */
    src: url('sofia_pro_ultra_light-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -79,6 +112,10 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
   font-family: 'SofiaUltraLight', sans-serif;
 }
 
+.sofialight {
+  font-family: 'SofiaLight', sans-serif;
+}
+
 .sofiabold {
   font-family: 'SofiaBold', sans-serif;
 }
@@ -92,6 +129,15 @@ p.sofiasemibold {
 p, a, .sofia {
   font-family: 'SofiaRegular', sans-serif;
 }
+
+// default to no underline, add them if it's in an isolated position or unclear
+a, a:link {
+  text-decoration: none;
+  color: $link-blue;
+}
+
+
+
 
 .highlighted {
 	background-color: rgba(255,255,166,0.75);
@@ -182,14 +228,6 @@ p.para-s {
   background-size: 100% 16px;
 }
 
-
-
-
-//some colours to use as $ ... move out into a colours doc at some point
-
-$table-header: #005994;
-$action-green: #009419;
-$link-blue: #1D8FFF; //dodget blue / base
 
 
 
@@ -317,9 +355,10 @@ $tablecol: 24px;
 }
 
 .moves {
-  .active {border-bottom: 2px solid $table-header;color: $table-header;}
 
-  a { text-decoration: none;color: $link-blue;font-weight: 600 ; }
+  .active {border-bottom: 3px solid $table-header;color: $table-header;}
+
+  a { font-size:14px;text-transform:uppercase;text-decoration: none;color: $link-blue;font-weight: 600;margin-left: 0.5em; }
   a:hover {text-decoration: underline;color: $table-header;}
 }
 
@@ -344,6 +383,64 @@ div.menuburger label {
 
 
 
+// user page layout things
+
+.header-cells-container {
+}
+.header-cell {
+  margin-right: 24px;
+  float:left;
+  width: 216px;
+  display: block;
+  position: relative;
+  top:-4px;
+  height: 112px;
+  overflow: hidden;
+}
+
+.last-cell {
+  margin-right: 0;
+}
+.header-cells-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.header-cell p {
+  margin-top: -1px;
+}
+.header-number {
+  font-family: 'SofiaLight', sans-serif;
+  font-size: 48px;
+  color: #333;
+  text-align: left;
+  display: block;
+  margin-top: -3px;
+  margin-bottom: -5px;
+  max-width: 8ch;
+  overflow: hidden;
+}
+
+.header-number .pennies {
+  position: relative;
+  top:-16px;
+  opacity: 0.66;
+  font-size: 50%;
+}
+a.explain-blob {
+  color: white;
+  font-weight: 600;
+  background-color: $link-blue;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.3;
+  font-size: 14px;
+  position: relative;
+  left:8px;
+}
 
 
 
