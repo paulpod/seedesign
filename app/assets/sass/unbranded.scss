@@ -96,7 +96,7 @@ p, a, .sofia {
 .highlighted {
 	background-color: rgba(255,255,166,0.75);
 }
-.pennies {
+.pennies-testpage {
 	font-size: 50px;
 }
 
@@ -158,7 +158,7 @@ p.para-s {
 // as it's probably impossible to make all the 
 // bits fit together exactly
 
-.pangram-block {
+.striped, .pangram-block {
   background: linear-gradient(
   to bottom,
   #fcc,
@@ -364,24 +364,41 @@ div.menuburger label {
 // share-table-buysell      --merge with actions
 
 @media screen and (max-width: 768px) {
-table {width:366px;}
-.update-blob {display: none;}
-.share-table {position:relative;left: -16px;}
-th.share-table-name {padding-left:16px;}
-th.share-table-invested, td.share-table-invested {padding-right:16px;}
+  table {width:366px;}
+  div.menuburger {top:0.1rem;}
+  table, th, td {font-size: 16px !important;}
+  .update-blob {display: none;}
+  .share-table {position:relative;left: -16px;}
+  .share-table table {position: relative;top:-5px;}
+  .striped {background-position: 0 -3px;}
+  th {line-height: 1.2;}
+  td {line-height: 1.2;}
+  th.share-table-name {padding-left:16px;}
+  th.share-table-invested, td.share-table-invested {padding-right:16px;}
+  .pennies {display: none;}
 
 
-th.col1, td.col1, 
-th.share-table-shares, td.share-table-shares, 
-th.share-table-moves, td.share-table-moves, 
-th.share-table-valuation, td.share-table-valuation, 
-th.share-table-buysell, td.share-table-buysell {display: none;}
+  th.col1, td.col1, 
+  th.share-table-shares, td.share-table-shares, 
+  th.share-table-moves, td.share-table-moves, 
+  th.share-table-valuation, td.share-table-valuation, 
+  th.share-table-buysell, td.share-table-buysell {display: none;}
 }
 
 
 // quick table for all the coloured blocks of each of the example companies logos and colours
 // could probably do this with a single svg on the sibling class and just change the colour 
 // but I couldn;t get that to work in a sensible amount of time
+@media screen and (max-width: 768px) {
+  td[class*="company"] {
+    background-position: 0 -3px;
+  }
+}
+@media screen and (min-width: 769px) {
+  td[class*="company"] {
+    background-position: 0 2px;
+  }
+}
 
 .company-igloo {
   background: no-repeat url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20px' height='48px' fill='hotpink' viewBox='0 0 20 48'%3E%3Crect y='16' width='8' height='16'/%3E%3C/svg%3E");
