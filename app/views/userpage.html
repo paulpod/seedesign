@@ -7,6 +7,11 @@
 
 {% block content %}
 
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
 <div class="header-cells-container "><!-- container with max-widths and side margins -->
 
   <h1 class="govuk-heading-m" style="position: relative;left:-3px"><!-- fiddling with type to sharpen left margin-->
@@ -14,45 +19,75 @@
   </h1>
 
   <div class="header-cell"><!-- we'll have six of these on a desktop, based on a 12 column grid with 24px gutters -->
-    <p>Amount invested
-    <span class="header-number">£24,754<span class="hide-mobile">.</span><span class="pennies">63</span></span>
-      <span class="sofialight">in 15 businesses</p>
+    <p>
+      Amount invested
+      <span class="header-number">
+        £24,754<span class="hide-mobile">.</span><span class="pennies">63</span>
+      </span>
+      <span class="sofialight">in 15 businesses</span>
+    </p>
   </div><!-- end cell -->
 
   <div class="header-cell">
-    <p>Current value
-    <span class="header-number">£72,793<span class="hide-mobile">.</span><span class="pennies">70</span></span>
-      &nbsp;</p>
+    <p>
+      Current value
+      <span class="header-number">
+        £72,793<span class="hide-mobile">.</span><span class="pennies">70</span>
+      </span>
+      &nbsp;
+    </p>
   </div><!-- end cell -->
 
   <div class="header-cell">
-    <p>IRR<a href="#" class="explain-blob">?</a>
+    <p>
+      IRR<a href="#" class="explain-blob">?</a>
       <span class="header-number">13.2%</span>
-      <a href="#">show calculation</a></p>
+      <a href="#">show calculation</a>
+    </p>
   </div><!-- end cell -->
 
   <div class="header-cell last-cell">
-    <p>IRR, tax adjusted<a href="#" class="explain-blob">?</a>
+    <p>
+      IRR, tax adjusted<a href="#" class="explain-blob">?</a>
       <span class="header-number">37.1%</span>
-      <a href="#">show calculation</a></p>
+      <a href="#">show calculation</a>
+    </p>
   </div><!-- end cell -->
+
+  <div class="header-cell extra-cell">
+      <p>
+        Cash balance
+        <span class="header-number">
+        £720<span class="hide-mobile">.</span><span class="pennies">22</span>
+      </span>
+        <a href="#">add money</a>
+      </p>
+    </div><!-- end cell -->
 
 </div><!-- end container -->
 
 
 <!-- Create a div where the graph will take place -->
-<div id="user-data-chart"></div>
-
-<script src="/public/javascripts/user-data-chart.js" defer></script>
-
-
+<div id="main">
+<!--<svg width="960" height="300" id="user-data-chart"></svg>-->
+</div>
 
 
-
+<script src="/public/javascripts/stream-graph.js" defer></script>
 
 
 
-  <div class="govuk-grid-row">
+
+</span>
+  </div><!-- end column full -->
+
+  
+
+</div><!-- end grid row -->
+
+
+
+ <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       <div class="">
@@ -72,7 +107,7 @@
         </div>
         <!-- end table header block -->
 
-        <div class="share-table ">
+        <div class="share-table">
           <table>
             <thead>
               <th class="share-table-name">Investments&nbsp;<span class="hide-mobile updates-heading-blob">4</span><span class="hide-mobile updates-heading-label">updates</span></th>
@@ -127,12 +162,251 @@
                 <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
 
                 <td class="share-table-buysell">
+
+                  <div class="small-button buy-button">
+                    &nbsp;
+                  </div>
+
+                  <div class="small-button sell-button">
+                    &nbsp;
+                  </div>
                   
                 </td>
               </tr>
 
+              <tr>
+                <td class="name company-abund share-table-name">Abundance Investment</td>
+
+                <td class="numeric share-table-invested">£45<span class="pennies">.23</span></td>
+
+                <td class="numeric share-table-shares">3</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {68,56,43,35,51,39,27}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">-4.2%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£16.9m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£44<span class="pennies">.68</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-macre share-table-name">MacRebeur</td>
+
+                <td class="numeric share-table-invested">£104<span class="pennies">.22</span></td>
+
+                <td class="numeric share-table-shares">3</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {18,26,33,45,71}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">-23.5%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£16.9m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£44<span class="pennies">.68</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-den share-table-name">Den<span class="update-blob">2</span></td>
+
+                <td class="numeric share-table-invested">£16<span class="pennies">.43</span></td>
+
+                <td class="numeric share-table-shares">4</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {9,10,23,18,26,33,45,71}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">+12.3%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£8m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£18<span class="pennies">.45</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-revol share-table-name">revolut</td>
+
+                <td class="numeric share-table-invested">£22,040<span class="pennies">.44</span></td>
+
+                <td class="numeric share-table-shares">102</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {1,2,3,6,13,45,71}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">-313.5%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£3.2B</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£6,9184<span class="pennies">.94</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-aduna share-table-name">Aduna</td>
+
+                <td class="numeric share-table-invested">£201<span class="pennies">.22</span></td>
+
+                <td class="numeric share-table-shares">12</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {8,26,33,11}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">-1.15%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£16m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£174<span class="pennies">.97</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-evento share-table-name">Eventopis</td>
+
+                <td class="numeric share-table-invested">£450<span class="pennies">.50</span></td>
+
+                <td class="numeric share-table-shares">5</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {18,26,33,45,71}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">+3.6%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£10.5m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£466<span class="pennies">.72</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+              <tr>
+                <td class="name company-fecana share-table-name">Fecana</td>
+
+                <td class="numeric share-table-invested">£500<span class="pennies">.00</span></td>
+
+                <td class="numeric share-table-shares">10</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="sparkline numeric share-table-moves">
+                  <span class="sparks dotline-medium">
+                    {18,26,33,45,71}
+                  </span>
+                </td>
+
+                <td class="numeric share-table-moves">+7.6%<span style="visibility: hidden">%</span></td>
+
+                <td class="numeric share-table-valuation">£16.6m</td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td class="numeric share-table-value">£538<span class="pennies">.00</span></td>
+
+                <td class="col1">&nbsp;</td>
+
+                <td><div class="tablebutton menuburger"><label>Menu</label></div></td>
+
+                <td class="share-table-buysell">
+                  
+                </td>
+              </tr>
+
+
             </tbody>
           </table>
+
+
+
+
+
+         
 
         </div>
 
