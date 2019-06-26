@@ -326,6 +326,9 @@ th.numeric, td.numeric {
   text-align: right;
 }
 
+
+
+// the buy sell cancel buttons on the portfolio table
 .buy-button {
   border-radius: 6px;
   border:2px solid blue;
@@ -621,3 +624,127 @@ a.explain-blob {
   }
 }
 
+
+
+
+// campaign card
+
+.campaign-card {
+  font-family: 'SofiaRegular', sans-serif;
+  background-color: white;
+  width:300px;
+  height: 512px;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.33);
+  -moz-box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.33);
+  box-shadow: 0px 3px 4px 1px rgba(0,0,0,0.33);
+}
+.campaign-card-image {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height:252px;
+  border-radius: 8px 8px 0 0;
+}
+.campaign-card-tagline {
+  background-color: rgba(0,0,0,0.4);
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  height: 36px;
+  border-radius: 8px 8px 0 0;
+  position: relative;
+  top:-252px;
+  line-height: 2.6;
+}
+.campaign-card-icon {
+  background-color: teal;
+  height: 63px;
+  width: 63px;
+  position: relative;
+  left:16px;
+  color: white;
+  text-align:center;
+  position: relative;
+  top:-100px;
+}
+
+.campaign-card-flag {
+  font-size: 12px;
+  text-align: right;
+  background-image: url('/public/images/flag-uk.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 24px;
+  height: 24px;
+  position: relative;
+  top:-132px;
+  padding: 6px;
+
+  span {
+    position: relative;
+    top:6px;
+    right: 24px;
+  }
+}
+
+.campaign-card-content {
+position: relative;
+top:-126px;
+padding: 0 0 0 15px;
+  
+  h2,p {
+    padding: 0;
+    margin: 0;
+  }
+
+}
+
+.campaign-card-numbers {
+background-color: #e5f3f7;
+position: relative;
+top:-132px;
+padding: 10px 0 6px 0;
+  div {
+    font-size: 12px;
+    text-transform: uppercase;
+    width: 33%;
+    float:left;
+    text-align: center;
+  }
+  span {
+    font-size: 16px;
+  }
+}
+
+.campaign-card-numbers:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.campaign-card-countdown {
+  font-size: 11px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  background-color: #99d4ea;
+  position: relative;
+  top:-134px;
+  padding: 4px 0 2px 0;
+}
+
+.campaign-card-action {
+  text-align: center;
+  background-color: #9ce53d;
+  border-radius: 0 0 8px 8px;
+  text-transform: uppercase;
+  line-height: 2.5;
+  height: 36px;
+  position: relative;
+  top:-134px;
+}
+
+
+#felcana {
+  background-image: url('/public/images/cardimg-felcana.jpg');
+}

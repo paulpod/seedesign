@@ -9,6 +9,7 @@ var matrix1 = d3.range(m).map(function (d) { return { x:d }; });
 // Fill them with random data
 d3.range(n).map(function(d) { bumpLayer(m, matrix0, d); });
 d3.range(n).map(function(d) { bumpLayer(m, matrix1, d); });
+console.log( function(d) { bumpLayer(m, matrix1, d); });
 
 var layers0 = stack(matrix0),
     layers1 = stack(matrix1);
