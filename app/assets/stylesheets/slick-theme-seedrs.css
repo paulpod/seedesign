@@ -181,11 +181,12 @@
     width: 20px;
     height: 20px;
 
-    content: '•';
+    
     text-align: center;
 
     opacity: .25;
     color: black;
+    background-color: black;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
