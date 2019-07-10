@@ -22,6 +22,8 @@ $govuk-global-styles: true;
 $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 
+@import "patterns/seedrs-slick-carousel";
+
 
 // these extra cells are hidden on narrower screens, it's a bit of a cheat as it's responsive content, not layout
 @media screen and (max-width: 1183px) {
@@ -788,7 +790,7 @@ padding: 10px 0 6px 0;
 
 
 .slick-slide {
-  transition: all ease-in-out .3s;
+  transition: all ease-in-out .1s;
   opacity: .2;
 }
 
