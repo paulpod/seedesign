@@ -205,6 +205,26 @@ a, a:link {
   top:0.2em; //add to the fontsize = a multiple of the 8/16 baseline grid
 }
 
+
+/* map all the gov headings to a more Seedrs one! */
+.heading-xl {
+  @extend .govuk-heading-xl;
+}
+.heading-l {
+  @extend .govuk-heading-l;
+}
+
+.heading-m {
+  @extend .govuk-heading-m;
+}
+
+.heading-s {
+  @extend .govuk-heading-s;
+}
+
+
+
+
 p {
   margin: 0 0 1em 0;
   padding: 0 0 0 0;
@@ -749,11 +769,12 @@ padding: 10px 0 6px 0;
 
 .slider {
   width: 100%;
-  margin: 100px auto;
 }
 
 .slick-slide {
   margin: 0px 20px;
+  height: 300px;
+  display: block;
 }
 
 .slick-slide img {

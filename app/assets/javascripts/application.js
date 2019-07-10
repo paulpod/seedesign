@@ -15,6 +15,8 @@ $(document).on('ready', function() {
 
   $('.single-item').slick({
     dots: true,
+    initialSlide: 0,
+    arrows: true
   });
 
 });
