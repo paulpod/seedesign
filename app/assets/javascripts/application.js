@@ -11,3 +11,10 @@ $(document).ready(function () {
 
 
 
+$(document).on('ready', function() {
+
+  $('.single-item').slick({
+    dots: true,
+  });
+
+});
