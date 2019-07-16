@@ -791,11 +791,11 @@ padding: 10px 0 6px 0;
 
 .slick-slide {
   transition: all ease-in-out .1s;
-  opacity: .2;
+  height: 400px !important;
 }
 
 .slick-active {
-  opacity: .5;
+  opacity: 1;
 }
 
 .slick-current {
