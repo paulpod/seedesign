@@ -84,17 +84,17 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '\00A0';
     background-image: url('/public/images/carousel-left-arrow.svg');
     background-repeat: no-repeat;
-    padding: 9px 0;
+    padding: 9px 10px;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '\00A0';
     background-image: url('/public/images/carousel-left-arrow.svg');
     background-repeat: no-repeat;
-    padding: 9px 0;
+    padding: 9px 10px;
 }
 
 .slick-next
@@ -110,18 +110,18 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '\00A0';
     color: red;
     background-image: url('/public/images/carousel-right-arrow.svg');
     background-repeat: no-repeat;
-    padding: 9px 0;
+    padding: 9px 10px;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '→';
+    content: '\00A0';
     background-image: url('/public/images/carousel-right-arrow.svg');
     background-repeat: no-repeat;
-    padding: 9px 0;
+    padding: 9px 10px;
 }
 
 
@@ -223,3 +223,10 @@
     background: black;
     color: black;
 }
+
+
+
+
+
+
+

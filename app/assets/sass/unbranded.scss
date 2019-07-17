@@ -771,16 +771,18 @@ padding: 10px 0 6px 0;
 
 .slider {
   width: 100%;
+  background-color: yellow;
 }
 
 .slick-slide {
   margin: 0px 20px;
   height: 300px;
-  display: block;
+  //display: block;
 }
 
 .slick-slide img {
   width: 100%;
+
 }
 
 .slick-prev:before,
@@ -806,8 +808,10 @@ padding: 10px 0 6px 0;
 
 
 .slider div {
-  background-color: #666;
+  //background-color: #666;
 }
 
-
+.slick-list {
+  border-radius: 8px;
+}
 
