@@ -760,9 +760,19 @@ padding: 10px 0 6px 0;
 
 #felcana {
   background-image: url('/public/images/cardimg-felcana.jpg');
+}
 
 
-
+#country-disclaim {
+  font-family: 'SofiaSemiBold', sans-serif;
+  color: #136;
+  background-image: url('/public/images/flag-uk.svg');
+  background-size: 32px;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 0;
+  height: 32px;
+  padding-left:48px;
 }
 
 
