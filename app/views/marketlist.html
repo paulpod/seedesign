@@ -2,7 +2,7 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Seedrs Design - using Sofia Pro with numbers
+  Seedrs Design - Business list, market list
 {% endblock %}
 
 {% block content %}
@@ -35,7 +35,7 @@
         <!-- end table header block -->
 
         <div class="share-table">
-          <table border="1">
+          <table class="marketlist">
             <thead>
               <th class="share-table-name" valign="bottom">Investments</th>
 
@@ -53,10 +53,17 @@
                 Buy&nbsp;/&nbsp;Sell
               </th>
 
-              <th colspan="3" class="numeric" valign="bottom">
+              <th class="numeric" valign="bottom">
+                Low
+              </th>
+              
+              <th class="numeric" valign="bottom">
                 <center>
                 Pricing<br>
-                High / Low
+                Availability
+              </th>
+              <th class="numeric" valign="bottom" style="text-align: left">
+                High
               </th>
 
 
