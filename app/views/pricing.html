@@ -67,6 +67,22 @@
       <img src="/public/images/tickets-buyer.png" style="width: 150%;overflow: visible; margin-left: -10px">
     </a>
 
+    <br>
+
+    <p>Deal ticket for buyers is about entering a quantity, seeing the best (cheapest) shares that are available to complete an order of that size. This may require multiple lots at rising prices, and convert the highest into a partial share lot.</p>
+
+    <p>Assumption: we don't need to provide a 'total' as splitting up sharelots (and shares) as required meets the amount entered by the buyer.</p>
+
+    <p>Process: share lots get bought up (reserved) by buyers, notification is sent to the sellers, approval results in a cleared-pending sale which gets acted on when the market opens.</p>
+    
+    <p>
+    <ul>
+      <li>Why aren't we showing all of the market depth (all the offered shares to sell, in prices all the way up to high/unreasonable?)</li>
+      <li>Would it help anything? What would be the benefit?</li>
+      <li>You could potentially reveal that pricing by putting a large buy quantity in the box and we would then have to try and show all of the available shares/sharelots for sale to fulfill that buy request</li>
+    </ul>
+    </p>
+
 
   </div>
 </div>
