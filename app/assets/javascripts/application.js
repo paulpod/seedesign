@@ -14,34 +14,20 @@ $(document).ready(function () {
 $(document).on('ready', function() {
 
   $('.about-slick').slick({
-    
-    initialSlide: 0,
-    arrows: true,
-    centerMode: false,
-    slidesToShow: 1,
-    responsive: [
-    
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 460,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-  });
+  dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 2.2,
+  centerMode: false,
+
+  variableWidth: true
+});
+
+
+  $('.about-slick').on('edge', function(event, slick, direction){
+  console.log('edge was hit')
+});
+
 
 
   $('.calc-slick').slick({
