@@ -179,6 +179,28 @@ $link-blue: #1D8FFF; //dodget blue / base
   font-family: 'sofiasoftmedium', sans-serif !important;
 }
 
+.govuk-label {
+  font-family: 'sofiasoftmedium', sans-serif !important;
+  color: white;
+  font-size: 1.15em;
+}
+
+.example-label, .example-answer {
+  font-family: 'sofiasoftmedium', sans-serif !important;
+  color: white;
+  font-weight: normal;
+  font-size: 1.2em;
+}
+
+.example-answer {
+  text-align: right;
+  background-color: rgba(0,0,0,0.33);
+  border-radius: 16px;
+  padding: 0.1em 1em;
+  display: inline-block;
+  line-height: 1.6;
+}
+
 p.sofiasemibold {
   font-family: 'SofiaSemiBold', sans-serif;
   margin-top: -0.18em;
@@ -894,7 +916,43 @@ padding: 10px 0 6px 0;
  margin-bottom: 1.2em;
 }
 
+
+#seedr-desk-slide-01 {
+  background-color: #57a6f8;
+  width: 600px;
+  height: 500px;
+  padding: 1em;
+  text-align: center;
+  background-image: url('/public/images/people-circle.png');
+  background-repeat: no-repeat;
+  background-size: 380px;
+  background-position: center;
+}
+#seedr-desk-slide-02 {
+  background-color: #4593ec;
+  width: 450px;
+  height: 500px;
+  padding: 1em;
+  text-align: center;
+  background-image: url('/public/images/company-circle.png');
+  background-size: 230px;
+  background-position: center 150px;
+  background-repeat: no-repeat;
+}
+#seedr-desk-slide-03 {
+  background-color: #3281db;
+  width: 480px;
+  height: 500px;
+  padding: 1em;
+  text-align: center;
+  background-image: url('/public/images/celebrate-people.png');
+  background-repeat: no-repeat;
+  background-position: center 100px;
+  background-size: 400px
+}
+
 #seedr-desk-slide-04 {
+  background-color: #1864ba;
   width: 680px;
   height:500px;
   padding: 1em;
@@ -906,7 +964,8 @@ padding: 10px 0 6px 0;
 }
 
 #seedr-desk-slide-05 {
-width: 460px;
+  background-color: #0c4e96;
+  width: 460px;
   height:500px;
   padding: 1em;
   text-align: center;
@@ -917,7 +976,8 @@ width: 460px;
 }
 
 #seedr-desk-slide-06 {
-width: 590px;
+  background-color: #0b4086;
+  width: 590px;
   height:500px;
   padding: 1em;
   text-align: center;
@@ -926,6 +986,61 @@ width: 590px;
   background-repeat: no-repeat;
   background-position: 200px 15px;
 }
+
+
+
+
+
+
+#calc-desk-slide-01 {
+  background-color: #f7c33b;
+  width: 500px;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+  background-image: url('/public/images/eis-boxes.png');
+  background-repeat: no-repeat;
+  background-size: 480px;
+  background-position: center 120px;
+}
+#calc-desk-slide-02 {
+  background-color: #f4af2d;
+  width: 230px;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+  
+}
+#calc-desk-slide-03 {
+  background-color: #e1a024;
+  width: 280px;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+ 
+}
+
+#calc-desk-slide-04 {
+  background-color: #d68c24;
+  width: 280px;
+  height:500px;
+  padding: 1em;
+  text-align: left;
+ 
+}
+
+#calc-desk-slide-05 {
+  background-color: #d66c14;
+  width: 450px;
+  height:500px;
+  padding: 1em;
+  text-align: left;
+ 
+}
+
+
+
+
 
 
 

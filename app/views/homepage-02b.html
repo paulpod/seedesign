@@ -1,0 +1,267 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Branching
+{% endblock %}
+
+{% block beforeContent %}
+  {% include "includes/breadcrumb_examples.html" %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h2 class="govuk-fieldset__heading">
+              The highest tax band you pay
+            </h2>
+          </legend>
+
+                
+                  <div class="govuk-radios govuk-radios">
+                      <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="tax45" type="radio" name="taxrate" value="false" >
+                      <label class="govuk-label govuk-radios__label" for="tax45">45% (additional rate)</label>
+                    </div>
+                 
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="tax40" type="radio" name="taxrate" value="false" >
+                      <label class="govuk-label govuk-radios__label" for="tax40">40% (higher rate)</label>
+                    </div>
+                  
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="tax20" type="radio" name="taxrate" value="false" >
+                      <label class="govuk-label govuk-radios__label" for="tax20">20% (basic rate)</label>
+                    </div>
+                 
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="taxno" type="radio" name="taxrate" value="false" >
+                      <label class="govuk-label govuk-radios__label" for="taxno">0% (I don't pay tax)</label>
+                    </div>
+                  </div>
+                  
+
+
+              </fieldset>
+
+            </div>
+
+          </div>
+        </div>
+
+
+
+    <section class="hide-mobile">
+      <h2 class="heading-m">How it works</h2>
+
+      <div id="about-carousel" class="slider about-slick">
+
+        <div id="about-slide-01">
+
+          <div id="seedr-desk-slide-01">
+            
+            <h3 class="sofiasoft-headline">Lots of different people<br>can invest in... </h3>
+
+          </div>
+           
+
+        </div>
+
+
+
+        <div id="about-slide-02">
+
+          <div id="seedr-desk-slide-02">
+            
+            <h3 class="sofiasoft-headline">...lots of different types of small businesses</h3>
+
+          </div>
+            
+        </div>
+
+
+        <div id="about-slide-03">
+
+          <div id="seedr-desk-slide-03">
+            
+            <h3 class="sofiasoft-headline" style="color:white;">They can become shareholders and share in future success.</h3>
+
+          </div>
+            
+        </div>
+
+
+
+        <div id="about-slide-04">
+
+          <div id="seedr-desk-slide-04">
+
+            <h3 class="sofiasoft-headline" style="text-align:left;width: 440px">With Seedrs you benefit from robust shareholder rights...</h3>
+
+            <ul class="slide-bullets">
+              <li>protection against dilution from future investors</li>
+              <li>better terms in an exit, merger or other event</li>
+              <li>drag-along, tag-along, pre-emption, and more</li>
+            </ul>
+
+          </div>
+            
+        </div>
+
+
+
+
+        <div id="about-slide-05">
+
+          <div id="seedr-desk-slide-05">
+            
+            <h3 class="sofiasoft-headline" style="text-align:left;width: 440px">...and participate in share sales in the secondary market.</h3>
+          </div>
+            
+        </div>
+
+
+
+
+        <div id="about-slide-06">
+
+          <div id="seedr-desk-slide-06">
+            
+            <h3 class="sofiasoft-headline" style="text-align:left;width: 440px">For bigger investors, you can even invest directly</h3>
+
+            <p style="color: #3fc;text-align: left;position: absolute;bottom:-15px">* Minimum &pound;10,000 investment</p>
+
+          </div>
+            
+        </div>
+
+
+       
+      </div>
+
+    </section>
+
+
+
+
+
+
+
+
+    <section class="hide-mobile">
+      <h2 class="heading-m">By the numbers</h2>
+
+      <div id="calc-carousel" class="slider calc-slick">
+
+        <div id="calc-slide-01">
+
+          <div id="calc-desk-slide-01">
+            
+            <h3 class="sofiasoft-headline" style="max-width: 400px">Investments may benefit from UK Government support* in the form of tax relief...</h3>
+
+             <p style="width:510px;color: #440;text-align: right;position: absolute;bottom:-15px">Let's see an example:</p>
+
+          </div>
+           
+
+        </div>
+
+
+
+        <div id="calc-slide-02">
+
+          <div id="calc-desk-slide-02">
+            
+            <h3 class="sofiasoft-headline">Your investment</h3>
+
+            <img src="/public/images/calc-01.svg" style="width: 180px;position: relative;top:20px">
+
+          </div>
+            
+        </div>
+
+
+        <div id="calc-slide-03">
+
+          <div id="calc-desk-slide-03">
+
+            <form class="form" method="get" >
+            
+            <h3 class="sofiasoft-headline">The highest tax band you pay</h3>
+
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+
+                
+                    <div class="multiple-choice">
+                      <input id="tax45" type="radio" name="taxrate" value="45%" >
+                      <label for="tax45" style="padding-left: 5px">45% (additional rate)</label>
+                    </div>
+                 
+                    <div class="multiple-choice">
+                      <input id="tax40" type="radio" name="taxrate" value="40%" >
+                      <label for="tax40" style="padding-left: 5px">40% (higher rate)</label>
+                    </div>
+                  
+                    <div class="multiple-choice">
+                      <input id="tax20" type="radio" name="taxrate" value="20%" >
+                      <label for="tax20" style="padding-left: 5px">20% (basic rate)</label>
+                    </div>
+                 
+                    <div class="multiple-choice">
+                      <input id="taxno" type="radio" name="taxrate" value="45%" >
+                      <label for="taxno" style="padding-left: 5px">0% (I don't pay tax)</label>
+                    </div>
+                  
+
+
+              </fieldset>
+
+          </form>
+
+          </div>
+            
+        </div>
+
+
+
+        <div id="calc-slide-04">
+
+          <div id="calc-desk-slide-04">
+
+            <h3 class="sofiasoft-headline" style="text-align:left;width: 440px">With Seedrs you benefit from robust shareholder rights...</h3>
+
+            <ul class="slide-bullets">
+              <li>protection against dilution from future investors</li>
+              <li>better terms in an exit, merger or other event</li>
+              <li>drag-along, tag-along, pre-emption, and more</li>
+            </ul>
+
+          </div>
+            
+        </div>
+
+
+
+
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
