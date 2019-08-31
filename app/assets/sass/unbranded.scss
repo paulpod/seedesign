@@ -181,15 +181,18 @@ $link-blue: #1D8FFF; //dodget blue / base
 
 .govuk-label {
   font-family: 'sofiasoftmedium', sans-serif !important;
-  color: white;
-  font-size: 1.15em;
+  //color: white;
+  //font-size: 1.15em;
+  // move these to the homepage specific styles not these govuk levels
 }
 
 .example-label, .example-answer {
   font-family: 'sofiasoftmedium', sans-serif !important;
   color: white;
   font-weight: normal;
-  font-size: 1.2em;
+  font-size: 1.4em;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 .example-answer {
@@ -198,7 +201,11 @@ $link-blue: #1D8FFF; //dodget blue / base
   border-radius: 16px;
   padding: 0.1em 1em;
   display: inline-block;
-  line-height: 1.6;
+  line-height: 1.1;
+}
+
+#calc-table td {
+padding-top: 20px;
 }
 
 p.sofiasemibold {
@@ -857,9 +864,20 @@ padding: 10px 0 6px 0;
 
 // Slick carousel styles 
 
+#calc-carousel {
+  background-color: #d65007;
+}
+#about-carousel {
+  background-color: #0a3076;
+}
+#hero-carousel {
+  background-color: red;
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 92%,rgba(200,200,200,0.45) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 92%,rgba(200,200,200,0.45) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
 .slider {
   width: 100%;
-  background-color: #0a3076;
   border-radius: 12px;
 }
 
@@ -887,6 +905,10 @@ padding: 10px 0 6px 0;
 
 .slick-active {
   opacity: 1;
+}
+
+.slick-active button {
+background-color: black !important;
 }
 
 .slick-current {
@@ -1031,7 +1053,7 @@ padding: 10px 0 6px 0;
 
 #calc-desk-slide-05 {
   background-color: #d66c14;
-  width: 450px;
+  width: 330px;
   height:500px;
   padding: 1em;
   text-align: left;
@@ -1041,8 +1063,98 @@ padding: 10px 0 6px 0;
 
 
 
+#hero-desk-slide-01 {
+  //background-color: #fff;
+  height: 300px;
+  padding: 1em;
+  text-align: left;
+  background-image: url('/public/images/hero-big-01.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 240px;
+}
+#hero-desk-slide-02 {
+  background-color: #aff42d;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+}
+#hero-desk-slide-03 {
+  background-color: #90e92d;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+}
 
+#hero-desk-slide-04 {
+  background-color: #80e02d;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+}
 
+#hero-desk-slide-05 {
+  background-color: #70d02d;
+  height: 500px;
+  padding: 1em;
+  text-align: left;
+}
 
+.hero-contentbox {
+  position: relative;
+  top:220px;
+  left:-1em;
+  height: 130px;
+  //background-color: rgba(255,255,255,1);
+  padding-right: 20px;
+  width: 105%;
 
+  p {
+    max-width: 660px;
+    //background-color: pink;
+  }
+}
+.hero-logobox {
+  width: 100px;
+  height: 170px;
+  position: relative;
+  left:40px;
+  top: -57px;
+  float: left;
+  margin-right: 60px;
+  //background-color: yellow;
+}
+
+.hero-headline {
+  font-family: 'sofiasoftmedium', sans-serif !important;
+  font-weight: normal;
+  font-size: 1.8em;
+  margin: 0;
+  padding: 11px 0 0 0;
+  //background-color: cyan;
+  max-width: 460px;
+}
+.hero-intro {
+  float:left;
+  max-width: 460px;
+}
+.hero-secondarybox {
+  float:right;
+  width: 340px;
+  
+  p {
+    font-size: 0.9em;
+  }
+}
+.hero-bignumber {
+  display: inline-block;
+  font-size: 1.8em;
+}
+.hero-flag {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  left:-1em;
+  top:175px;
+  
+}
 

@@ -1,0 +1,548 @@
+
+{% extends "layout_unbranded.html" %}
+
+{% block pageTitle %}
+  Seedrs Design - Pitch campaign card
+{% endblock %}
+
+{% block content %}
+
+<style type="text/css">
+ 
+*:focus {
+  outline: none;
+}
+
+body {
+  margin-top: 70px;
+  font-family: 'sofiasoftmedium', sans-serif !important;
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+p,
+a,
+span {
+  //color: #fff;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+h1,
+p,
+a {
+  
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1;
+  font-weight: 300;
+}
+
+button {
+  border: 0;
+  border-radius: 26px;
+  padding-bottom: 2px;
+}
+
+span {
+  font-size: 1.6em;
+}
+
+.container,
+.flip-box,
+.front,
+.back {
+  width: 380px;
+  height: 380px;
+}
+
+.container,
+.flip_box {
+  position: relative;
+}
+
+.front,
+.back {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+}
+
+.container {
+  -moz-transform: perspective(1200px);
+  -webkit-perspective: 1200px;
+  perspective: 1200px;
+}
+
+.flip_box {
+  transition: all 0.5s ease-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.front {
+  //outline: 1px solid #d6d6d6;
+  //outline-offset: -1px;
+  border-radius: 12px;
+  box-shadow: 0 0 3px #000;
+  padding-bottom: 8px;
+  background-color: #fcfcfc;
+  
+  
+}
+
+
+
+.back {
+  //outline: 1px solid #d6d6d6;
+  //outline-offset: -1px;
+  border-radius: 12px;
+  box-shadow: 0 0 3px #000;
+  padding-bottom: 8px;
+  background-color: #f6f6f6;
+  transition: all 0.5s linear;
+ 
+
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.b_headline {
+  padding-top: 50px;
+}
+
+.b_text {
+  font-size: 1.4em;
+  line-height: 28px;
+  padding-top: 10px;
+  opacity: 0.85;
+}
+
+.b_button {
+  display: none;
+  position: absolute;
+  //left: 36px;
+  //bottom: 38px;
+  width: 150px;
+  height: 52px;
+  background-color: #C30C3D;
+  transition: all 0.3s;
+}
+
+.b_button:hover {
+  background-color: #E30143;
+}
+
+.flipped {
+  -webkit-transform: rotateY(-180deg);
+  -moz-transform: rotateY(-180deg);
+  -ms-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+
+.r_wrap {
+  position: absolute;
+  right: 40px;
+  bottom: 38px;
+}
+
+.b_round,
+.s_round {
+  //display: none;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: #D21849;
+  transition: all 0.2s linear;
+}
+
+.b_round {
+  opacity: 0;
+  background-color: #D21849;
+}
+
+.b_round_hover {
+  //transform: scale(1.37);
+  opacity: 0.4;
+}
+
+.b_round_back_hover {
+  background-color: #F60044;
+}
+
+.s_round_click {
+  //transform: scale(1.7);
+}
+
+.s_round_back {
+  background-color: #C30C3D;
+}
+
+.s_arrow {
+  width: 52px;
+  height: 52px;
+  //background-image: url('https://img-fotki.yandex.ru/get/194549/29644339.5/0_d6c60_1d7815f0_orig');
+  background-color: transparent;
+  transition: all 0.35s linear;
+}
+
+.s_arrow_rotate {
+  transform: rotate(-180deg);
+}
+
+.card-flip-content {
+
+}
+.card-flip-content p {
+  text-align: center;
+  //font-size: 1em;
+  line-height: 1;
+  color: black;
+  margin: 0;
+}
+
+
+.countdowner {
+background-color: #ffa;
+padding: 10px 0 6px 0;
+}
+.countdown { 
+  text-align: center;
+  //background-color: #cef; 
+  width:81px;
+  float:left;
+  font-size: 1.2em;
+  line-height: 1;
+  padding: 6px 0;
+  border-radius: 6px
+}
+
+.funded-stripe {
+  margin: 12px 12px 0 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  padding: 10px 12px 0 12px;
+  background-color: #333;
+  height: 20px;
+  border-radius: 6px;
+  background: -webkit-linear-gradient(left, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50%,rgba(231,234,72,1) 81%,rgba(237,95,14,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50%,rgba(231,234,72,1) 81%,rgba(237,95,14,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.funded-stripe #stripe-label {
+  float:left;
+  font-size: 1.3em;
+  padding-top: 0;
+  line-height: 1;
+}
+.funded-stripe #stripe-amount {
+  float:right;
+  font-size: 1.3em;
+  padding-top: 0;
+  line-height: 1;
+}
+
+.card-metric {
+  height: 36px;
+  margin:4px 12px 2px 12px; 
+}
+.metric-unit {
+  float: left;
+  width:111px;
+  line-height: 1.6;
+}
+.metric-unit span {
+  font-size: 1em;
+  display: block;
+  line-height: 1.6;
+}
+
+
+.c_button button {
+  background-color: #6fa32b;
+  display: inline;
+  border-radius: 6px;
+  color:white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.visible_back {
+  opacity: 1;
+}
+.hidden_back {
+  opacity: 0;
+}
+.display_none {
+  display: none;
+}
+
+
+
+.cancelbutton {
+  background-color: yellow;
+  margin: 12px;
+  font-size: 1.4em;
+}
+
+
+
+</style>
+
+
+
+
+
+<div class='container'>
+
+  <div class='flip_box'>
+
+    <div class="front">
+
+      <div class="card-flip-content">
+        <p style="margin:12px 0 5px 0">Raised total</p>
+
+        <p style="font-size: 3.5em;">£2,420,220</p>
+
+        <p style="margin-top: 6px;">for <strong>5.50%</strong> equity from <strong>1,205</strong> investors</strong></p>
+
+        <div class="funded-stripe">
+          <div id="stripe-label">Overfunding</div>
+          <div id="stripe-amount">105%</div>
+        </div>
+
+
+        <br clear="all">
+
+
+        <div class="card-metric">
+          <div class="metric-unit" style="margin-right: 12px">
+            <p>Target
+            <span>£2,300,400</span></p>
+          </div>
+
+          <div class="metric-unit">
+            <p>Equity offered
+            <span>5.24%</span></p>
+          </div>
+
+          <div class="metric-unit" style="float: right;">
+            <p>Valuation*
+            <span>£41,600,400</span></p>
+          </div>
+        </div>
+
+
+        <br clear="all">
+
+
+        <div class="countdowner">
+          <p style="padding:2px 0 8px 0">Campaign closes in</p>
+
+          <div class="countdown" style="margin-left: 12px;margin-right: 12px;"><span>09</span><br>days</div>
+
+          <div class="countdown"><span>15</span><br>hours</div>
+
+          <div class="countdown" style=""><span>45</span><br>minutes</div>
+
+          <div class="countdown" style="margin-right: 12px;float:right"><span>20</span><br>seconds</div>
+
+          <br clear="all">
+        </div>
+
+      
+
+          
+
+        
+
+
+        <fieldset class="govuk-fieldset">
+
+          <!--<div class="govuk-form-group" style="margin-bottom: 0">
+          <label class="govuk-label" for="card-amount" style="color: black;font-size: 16px;text-align: left">
+            How much do you want to invest?
+          </label>
+          <input class="govuk-input" id="card-amount" name="card-amount" type="number" style="border-radius: 6px">
+
+          <div class="govuk-checkboxes__item" style="margin-top: 6px">
+            <input class="govuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agreed">
+            <label class="govuk-label govuk-checkboxes__label" for="agree" style="color: black;text-align:left;line-height:1.2;font-size:16px;font-weight: 300;padding-top: 3px">
+              I have read and agree to the investment agreement
+            </label>
+          </div>-->
+
+          <p style="margin-top:24px">How much do you want to invest?</p>
+
+          <div class="c_button" style="margin: 12px 0 0 12px">
+            <button class="c_round">£20</button>
+
+            <button class="c50_oneclick">£50</button>
+
+            <button class="c_round">£100</button>
+
+            <button class="c_other" style="background-color: #888;margin-right: 0">£ Other</button>
+          </div>
+
+        </fieldset>
+
+      </div><!-- end content block, added to keep card fixed location - padding broke it! -->
+   
+    </div>
+ 
+
+
+    <div class='back hidden_back display_none' id="c50_back">
+
+      <div class="card-flip-content">
+
+        <span class="cancelbutton cancel_c50">x Cancel</span>
+
+        <p style="font-size: 3.5em;">Invest £50</p>
+
+        <p style="margin-top: 6px;">in <strong>CompanyCo</strong> under the <strong>Seedrs Nominee</strong></p>
+
+        <fieldset class="govuk-fieldset">
+
+          <div class="govuk-form-group" style="margin: 0 0 0 12px">
+            <div class="govuk-radios govuk-radios" style="margin-top: 1.5em;">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_account" type="radio" name="performance" value="true" >
+                <label class="govuk-label govuk-radios__label" for="radio_account" style="font-size: 16px">Use my account - currently £136</label>
+              </div>
+         
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_card" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_card" style="font-size: 16px">Use my card - last four digits 3880</label>
+              </div>
+            
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_other" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_other" style="font-size: 16px">Use a different payment method</label>
+              </div>
+           
+              
+            </div>
+
+            <div class="govuk-checkboxes__item" style="margin-top: 24px">
+              <input class="govuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agreed">
+              <label class="govuk-label govuk-checkboxes__label" for="agree" style="color: black;text-align:left;line-height:1.2;font-size:18px;font-weight: 300;padding-top: 1px">
+                I have read and agree to the investment agreement
+              </label>
+            </div>
+          </div>
+
+
+
+          <div class="c_button" style="margin: 22px 12px 0 12px">
+            <button class="c_round" style="width: 100%">Complete investment</button>
+          </div>
+
+
+        </fieldset>
+
+      </div>
+
+    </div><!-- end c50 back face -->
+
+
+
+
+    <div class='back hidden_back display_none' id="c_otherback">
+
+      <div class="card-flip-content">
+
+        <span class="cancelbutton cancel_other">x Cancel</span>
+
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group" style="margin: 0 0 0 12px">
+
+
+            <label class="govuk-label" for="card-amount" style="color: black;font-size: 16px;text-align: left">
+              How much do you want to invest?
+            </label>
+            <input class="govuk-input" id="card-amount" name="card-amount" type="number" style="border-radius: 6px">
+
+
+            <div class="govuk-radios govuk-radios" style="margin-top: 1.5em;">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_account" type="radio" name="performance" value="true" >
+                <label class="govuk-label govuk-radios__label" for="radio_account" style="font-size: 16px">Use my account - currently £136</label>
+              </div>
+         
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_card" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_card" style="font-size: 16px">Use my card - last four digits 3880</label>
+              </div>
+            
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_other" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_other" style="font-size: 16px">Use a different payment method</label>
+              </div>
+           
+              
+            </div>
+
+            <div class="govuk-checkboxes__item" style="margin-top: 24px">
+              <input class="govuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agreed">
+              <label class="govuk-label govuk-checkboxes__label" for="agree" style="color: black;text-align:left;line-height:1.2;font-size:18px;font-weight: 300;padding-top: 1px">
+                I have read and agree to the investment agreement
+              </label>
+            </div>
+          </div>
+
+
+
+          <div class="c_button" style="margin: 22px 12px 0 12px">
+            <button class="c_round" style="width: 100%">Complete investment</button>
+          </div>
+
+
+        </fieldset>
+
+      </div>
+
+    </div><!-- end other amount back face -->
+
+
+
+
+
+  </div><!-- end flipping card -->
+
+
+
+
+  <div class='r_wrap'>
+
+    <div class='b_round'></div>
+    <div class='s_round'>
+      <div class='s_arrow'></div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+{% endblock %}
