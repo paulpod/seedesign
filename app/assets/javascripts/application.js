@@ -131,11 +131,12 @@ $(document).on('ready', function() {
 });
 
   $('.mobcard-slick').slick({
-  dots: true,
-  infinite: false,
+  dots: false,
+  infinite: true,
   speed: 500,
   slidesToShow: 1,
   centerMode: false,
+  arrows: false,
 
   variableWidth: true
 });
