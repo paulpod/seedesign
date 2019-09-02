@@ -22,6 +22,8 @@ $(document).ready(function() {
   var c50_round = '.c50_oneclick';
   var c_other = '.c_other';
 
+  var continue_other = '.continue_other';
+
   $(s_round).hover(function() {
     $('.b_round').toggleClass('b_round_hover');
     return false;
@@ -79,7 +81,26 @@ $(document).ready(function() {
     return false;
   });
 
-  
+  // using a continue button on the backface
+  // should go to a next step ... let's try flip, first
+
+  $(continue_other).click(function() {
+    $('.flip_box').toggleClass('flip-again');
+    $('#frontcard').toggleClass('display_none');
+
+    $('#c_anoback').toggleClass('display_none');
+
+    $('#c_anoback').toggleClass('hidden_back');
+    $('#c_otherback').toggleClass('hidden_back');
+
+    $('#c_anoback').one('transitionend', function() {
+      console.log('done Another');
+      $('#c_otherback').toggleClass('display_none');
+    });
+
+    return false;
+  });
+
 
 
 

@@ -153,6 +153,13 @@ span {
   transform: rotateY(-180deg);
 }
 
+.flip-again {
+  -webkit-transform: rotateY(-360deg);
+  -moz-transform: rotateY(-360deg);
+  -ms-transform: rotateY(-360deg);
+  transform: rotateY(-360deg);
+}
+
 .r_wrap {
   position: absolute;
   right: 40px;
@@ -320,7 +327,7 @@ background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50
 
   <div class='flip_box'>
 
-    <div class="front">
+    <div class="front" id="frontcard">
 
       <div class="card-flip-content">
         <p style="margin:12px 0 5px 0">Raised total</p>
@@ -458,7 +465,7 @@ background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50
 
 
           <div class="c_button" style="margin: 22px 12px 0 12px">
-            <button class="c_round" style="width: 100%">Complete investment</button>
+            <button class="c_round" style="width: 100%">Continue</button>
           </div>
 
 
@@ -517,7 +524,7 @@ background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50
 
 
           <div class="c_button" style="margin: 22px 12px 0 12px">
-            <button class="c_round" style="width: 100%">Complete investment</button>
+            <button class="continue_other" style="width: 100%">Continue</button>
           </div>
 
 
@@ -526,6 +533,61 @@ background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50
       </div>
 
     </div><!-- end other amount back face -->
+
+
+
+
+    <div class='front hidden_back display_none' id="c_anoback">
+
+      <div class="card-flip-content">
+
+        <span class="cancelbutton cancel_other">x Cancel</span>
+
+        <p>Pay using a different payment method</p>
+
+        <fieldset class="govuk-fieldset">
+          <div class="govuk-form-group" style="margin: 0 12px 0 12px">
+
+
+            <div class="govuk-radios govuk-radios" style="margin-top: 1.5em;">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_account" type="radio" name="performance" value="true" >
+                <label class="govuk-label govuk-radios__label" for="radio_account" style="font-size: 16px">Use a different debit card</label>
+              </div>
+         
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_card" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_card" style="font-size: 16px">Transfer some Euro (€137) to Pounds</label>
+              </div>
+            
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="radio_other" type="radio" name="performance" value="false" >
+                <label class="govuk-label govuk-radios__label" for="radio_other" style="font-size: 16px">Make a deposit via your bank</label>
+              </div>
+           
+              
+            </div>
+
+            <!--<div class="govuk-checkboxes__item" style="margin-top: 24px">
+              <input class="govuk-checkboxes__input" id="agree" name="agree" type="checkbox" value="agreed">
+              <label class="govuk-label govuk-checkboxes__label" for="agree" style="color: black;text-align:left;line-height:1.2;font-size:18px;font-weight: 300;padding-top: 1px">
+                I have read and agree to the investment agreement
+              </label>
+            </div>-->
+          </div>
+
+
+
+          <div class="c_button" style="margin: 22px 12px 0 12px">
+            <button class="continue_another" style="width: 100%">Continue</button>
+          </div>
+
+
+        </fieldset>
+
+      </div>
+
+    </div><!-- end other payment method back face -->
 
 
 
@@ -542,6 +604,13 @@ background: linear-gradient(to right, rgba(49,124,37,1) 0%,rgba(142,226,68,1) 50
     <div class='s_round'>
       <div class='s_arrow'></div>
     </div>
+  </div>
+
+
+  <div id="campaign_page">
+
+
+
   </div>
 
 </div>
