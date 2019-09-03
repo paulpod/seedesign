@@ -25,6 +25,10 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 @import "patterns/seedrs-slick-carousel";
 
 
+// this is the tinder style swipey cards - may break other things 
+@import "patterns/swipe";
+
+
 // these extra cells are hidden on narrower screens, it's a bit of a cheat as it's responsive content, not layout
 @media screen and (max-width: 1183px) {
 
