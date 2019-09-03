@@ -58,6 +58,9 @@ $(document).ready(function() {
     if (animating) return;
 
     $card = $(this);
+    $card.toggleClass('demo__current');
+
+
     $cardReject = $(".demo__card__choice.m--reject", $card);
     $cardLike = $(".demo__card__choice.m--like", $card);
     var startX =  e.pageX || e.originalEvent.touches[0].pageX;

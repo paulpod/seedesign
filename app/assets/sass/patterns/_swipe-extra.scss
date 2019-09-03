@@ -41,9 +41,11 @@ body {
   left: 24px;
   top: 0;
   width: 330px;
-  height: 440px;
+  height: 570px;
+  background-color: #f9f9f9;
   border-radius: 12px;
   transform-origin: 50% 100%;
+  overflow:scroll;
   //box-shadow: 0px 3px 16px 0px rgba(100,100,100,0.25);
 }
 

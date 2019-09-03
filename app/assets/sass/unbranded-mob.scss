@@ -26,7 +26,7 @@ $govuk-canvas-background-colour: $govuk-body-background-colour;
 
 
 // this is the tinder style swipey cards - may break other things 
-@import "patterns/swipe";
+@import "patterns/swipe-extra";
 
 
 // these extra cells are hidden on narrower screens, it's a bit of a cheat as it's responsive content, not layout
